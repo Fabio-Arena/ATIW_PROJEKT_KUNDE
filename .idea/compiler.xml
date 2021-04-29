@@ -9,5 +9,8 @@
         <module name="BLANK_JAVAFX" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ojdbc7" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>

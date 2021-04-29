@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -17,7 +18,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("secondary"), 640, 480);
+        scene = new Scene(loadFXML("primary"), 640, 480);
+        stage.setTitle("Neukunde");
         stage.setScene(scene);
         stage.show();
     }
@@ -32,6 +34,10 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        ODB db= new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
+
+        db.connect();
+
         launch();
     }
 

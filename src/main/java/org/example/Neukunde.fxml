@@ -99,9 +99,9 @@
                         </Label>
                         <HBox prefHeight="31.0" prefWidth="158.0">
                            <children>
-                              <CheckBox fx:id="neukundeCheckboxM" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" text="M" />
-                              <CheckBox fx:id="neukundeCheckboxW" mnemonicParsing="false" prefHeight="31.0" prefWidth="69.0" text="W" />
-                              <CheckBox fx:id="neukundeCheckboxO" mnemonicParsing="false" prefHeight="37.0" prefWidth="69.0" text="O" />
+                              <CheckBox fx:id="neukundeCheckboxM" mnemonicParsing="false" onAction="#CheckboxM" prefHeight="31.0" prefWidth="69.0" text="M" />
+                              <CheckBox fx:id="neukundeCheckboxW" mnemonicParsing="false" onAction="#CheckboxW" prefHeight="31.0" prefWidth="69.0" text="W" />
+                              <CheckBox fx:id="neukundeCheckboxO" mnemonicParsing="false" onAction="#CheckboxO" prefHeight="37.0" prefWidth="69.0" text="O" />
                            </children>
                         </HBox>
                      </children>
@@ -118,7 +118,7 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="134.0" prefHeight="31.0" prefWidth="305.0">
                      <children>
-                        <Label prefHeight="55.0" prefWidth="146.0" text="PLZ">
+                        <Label prefHeight="55.0" prefWidth="146.0" text="Stadt">
                            <font>
                               <Font name="Consolas Bold" size="23.0" />
                            </font>
@@ -128,8 +128,8 @@
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="67.0" text="Zurück" />
-                        <Button fx:id="neukundeButtonSpeichern" mnemonicParsing="false" prefHeight="41.0" prefWidth="87.0" text="Speichern">
+                        <Button fx:id="neukundeButtonZurück" mnemonicParsing="false" prefHeight="44.0" prefWidth="67.0" text="Zurück" />
+                        <Button fx:id="neukundeButtonSpeichern" mnemonicParsing="false" onAction="#speichernButtonOnAction" prefHeight="41.0" prefWidth="87.0" text="Speichern">
                            <HBox.margin>
                               <Insets left="160.0" />
                            </HBox.margin>
