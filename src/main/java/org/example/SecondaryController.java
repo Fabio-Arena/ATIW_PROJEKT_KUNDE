@@ -72,6 +72,12 @@ public class SecondaryController {
         System.out.println(textVorname.getText());
         System.out.println(textNachname.getText());
         System.out.println(datepickerDatum.getValue().toString());
+        if (radiobuttonM.isSelected() == true){
+            System.out.println("M");
+        }
+        else{
+            System.out.println("W");
+        }
         System.out.println(textStadt.getText());
         System.out.println(textStraße.getText());
 
