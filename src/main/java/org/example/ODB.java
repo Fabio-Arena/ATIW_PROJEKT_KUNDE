@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class ODB {
@@ -79,7 +80,7 @@ public class ODB {
         }
     }
 
-    public void insertData(String name, String vorname){
+    public void insertData(String name, String vorname, Date geburtstag, String geschlecht, String stadt,String strasse){
         Statement befehl = null;
         try {
             befehl = con.createStatement();
@@ -88,6 +89,14 @@ public class ODB {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public void deleteData(int kundenid){
+
+    }
+
+    public void updateData(String name, String vorname, Date geburtstag, String geschlecht, String stadt,String strasse){
+
     }
 
     public void close(){
