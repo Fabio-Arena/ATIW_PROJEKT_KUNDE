@@ -56,10 +56,14 @@ public class ODB {
             while(ergebnisse.next()) {
                 String name = ergebnisse.getString("name");
                 String vorname = ergebnisse.getString("vorname");
-                int pnr = ergebnisse.getInt("personal_nr");
-                Date geb = ergebnisse.getDate("Geburtstag");
+                Date geburtstag = ergebnisse.getDate("geburtstag");
+                String geschlecht = ergebnisse.getString("geschlecht");
+                String stadt = ergebnisse.getString("stadt");
+                String strasse = ergebnisse.getString("strasse");
+                //int pnr = ergebnisse.getInt("personal_nr");
 
-                ausgabe += "" + pnr + ", " + name + ", " + vorname + ", " + geb + "\n";
+
+                ausgabe += "" + name + ", " + vorname + ", " + geburtstag.toString() + ", " + geschlecht + ", " + stadt + ", " + strasse + "\n";
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -84,7 +88,7 @@ public class ODB {
         try {
             befehl = con.createStatement();
 
-            befehl.execute("INSERT INTO Test VALUES ('"+ name + "', '" + vorname +"')");
+            befehl.execute("INSERT INTO Kunde VALUES ('"+ name + "', '" + vorname +"')");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

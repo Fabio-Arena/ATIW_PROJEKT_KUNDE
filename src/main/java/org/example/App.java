@@ -32,7 +32,17 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+
+
+
+        ODB db= new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
+        db.connect();
+
+        System.out.print(db.getList("SELECT * FROM Kunde"));
+
         launch();
+
+
     }
 
 }
