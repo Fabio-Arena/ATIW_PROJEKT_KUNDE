@@ -7,6 +7,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 
 /**
  * JavaFX App
@@ -31,17 +35,11 @@ public class App extends Application {
         return fxmlLoader.load();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
 
 
-        ODB db= new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
-        db.connect();
 
-        System.out.print(db.getList("SELECT * FROM Kunde"));
-
-        System.out.println(db.getList("SELECT * FROM PERSONAL p"));
-        db.close();
         launch();
 
 

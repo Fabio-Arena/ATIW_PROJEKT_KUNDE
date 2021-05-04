@@ -69,17 +69,27 @@ public class SecondaryController {
     @FXML
     void Speichern(ActionEvent event) {
 
-        System.out.println(textVorname.getText());
-        System.out.println(textNachname.getText());
-        System.out.println(datepickerDatum.getValue().toString());
+        String geschl;
         if (radiobuttonM.isSelected() == true){
-            System.out.println("M");
+            geschl = "M";
         }
         else{
-            System.out.println("W");
+            geschl = "W";
         }
-        System.out.println(textStadt.getText());
-        System.out.println(textStraße.getText());
+
+        ODB db= new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
+        db.connect();
+
+
+
+
+        db.insertData(textNachname.getText(), textVorname.getText(), datepickerDatum.getValue().toString(), geschl , textStadt.getText(), textStraße.getText());
+
+
+
+
+
+        db.close();
 
     }
 

@@ -56,14 +56,14 @@ public class ODB {
             while(ergebnisse.next()) {
                 String name = ergebnisse.getString("name");
                 String vorname = ergebnisse.getString("vorname");
-                Date geburtstag = ergebnisse.getDate("geburtstag");
+                String geburtstag = ergebnisse.getString("geburtstag");
                 String geschlecht = ergebnisse.getString("geschlecht");
                 String stadt = ergebnisse.getString("stadt");
                 String strasse = ergebnisse.getString("strasse");
                 //int pnr = ergebnisse.getInt("personal_nr");
 
 
-                ausgabe += "" + name + ", " + vorname + ", " + geburtstag.toString() + ", " + geschlecht + ", " + stadt + ", " + strasse + "\n";
+                ausgabe += "" + name + ", " + vorname + ", " + geburtstag + ", " + geschlecht + ", " + stadt + ", " + strasse + "\n";
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
@@ -83,7 +83,7 @@ public class ODB {
         }
     }
 
-    public void insertData(String name, String vorname, Date geburtstag, String geschlecht, String stadt,String strasse){
+    public void insertData(String name, String vorname, String geburtstag, String geschlecht, String stadt,String strasse){
         Statement befehl = null;
         try {
             befehl = con.createStatement();
@@ -98,7 +98,7 @@ public class ODB {
 
     }
 
-    public void updateData(String name, String vorname, Date geburtstag, String geschlecht, String stadt,String strasse){
+    public void updateData(String name, String vorname, String geburtstag, String geschlecht, String stadt,String strasse){
 
     }
 
