@@ -40,6 +40,8 @@ public class App extends Application {
 
         System.out.print(db.getList("SELECT * FROM Kunde"));
 
+        System.out.println(db.getList("SELECT * FROM PERSONAL p"));
+        db.close();
         launch();
 
 

@@ -88,7 +88,7 @@ public class ODB {
         try {
             befehl = con.createStatement();
 
-            befehl.execute("INSERT INTO Kunde VALUES ('"+ name + "', '" + vorname +"')");
+            befehl.execute("INSERT INTO Kunde VALUES ('"+ name + "', '" + vorname + "', '"+geburtstag+"', '"+geschlecht+"', '"+stadt+"', '"+strasse +"')");
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
