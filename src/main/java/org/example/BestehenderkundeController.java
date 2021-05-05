@@ -88,7 +88,12 @@ public class BestehenderkundeController implements Initializable {
                 data = FXCollections.observableArrayList(result.getString("name"),result.getString("vorname"),result.getString("geburtstag"),result.getString("geschlecht"),result.getString("stadt"),result.getString("strasse"));
 
 
-                kundendaten.getItems().addAll(data.get(0),data.get(1),data.get(2),data.get(3),data.get(4),data.get(5));
+                kundendaten.getItems().add(data.get(0));
+                kundendaten.getItems().add(data.get(1));
+                kundendaten.getItems().add(data.get(2));
+                kundendaten.getItems().add(data.get(3));
+                kundendaten.getItems().add(data.get(4));
+                kundendaten.getItems().add(data.get(5));
 
             }
             for(int i=0;i<name.size();i++){
