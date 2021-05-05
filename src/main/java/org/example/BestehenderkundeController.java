@@ -51,7 +51,7 @@ public class BestehenderkundeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-
+        kundendaten.getColumns().clear();
 
         spalte_name.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue()));
         spalte_vorname.setCellValueFactory(param -> new ReadOnlyStringWrapper(param.getValue()));
@@ -89,7 +89,6 @@ public class BestehenderkundeController implements Initializable {
 
 
                // kundendaten.setItems(data);
-
 
             }
             for(int i=0;i<name.size();i++){
