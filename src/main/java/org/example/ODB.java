@@ -2,10 +2,10 @@ package org.example;
 
 import oracle.jdbc.pool.OracleDataSource;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.sql.*;
 import java.util.Date;
 
 public class ODB {
@@ -107,6 +107,40 @@ public class ODB {
             con.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
+        }
+    }
+    public void sqlToCSV(){
+        try (Connection connection = DriverManager.getConnection(connectionString, user, passwd)) {
+            String sql = "SELECT * FROM Kunde";
+
+            Statement statement = connection.createStatement();
+
+            ResultSet result = statement.executeQuery(sql);
+
+            BufferedWriter fileWriter = new BufferedWriter(new FileWriter("Kunde.csv"));
+
+            // write header line containing column names
+            fileWriter.write("Name,Vorname,Geburtstag,Geschlecht,Stadt,Strasse");
+            while(result.next()){
+                String name=result.getString("name");
+                String vorname=result.getString("vorname");
+                String geburtstag=result.getString("geburtstag");
+                String geschlecht=result.getString("geschlecht");
+                String stadt=result.getString("stadt");
+                String strasse=result.getString("strasse");
+
+                String line = String.format("\"%s\",%s,%s,%s,%s,%s",
+                        name, vorname, geburtstag, geschlecht, stadt,strasse);
+                fileWriter.newLine();
+                fileWriter.write(line);
+            }
+            statement.close();
+            fileWriter.close();
+        }catch (SQLException e){
+            System.out.println("Datenbank fehler");
+            e.printStackTrace();
+        }catch (IOException e){
+            System.out.println("File IO fehler");
         }
     }
 }
