@@ -1,5 +1,7 @@
 package org.example;
 import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -43,6 +45,7 @@ public class BestehenderkundeController implements Initializable {
 
     private ODB db = new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
 
+    public ObservableList<String> data;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -69,13 +72,14 @@ public class BestehenderkundeController implements Initializable {
 
             while (result.next()) {
                 String name = result.getString("name");
-                String vorname = result.getString("vorname");
+                data = FXCollections.observableArrayList(result.getString("vorname"));
                 String geburtstag = result.getString("geburtstag");
                 String geschlecht = result.getString("geschlecht");
                 String stadt = result.getString("stadt");
                 String strasse = result.getString("strasse");
 
 
+                kundendaten.setItems(data);
 
             }
             statement.close();
