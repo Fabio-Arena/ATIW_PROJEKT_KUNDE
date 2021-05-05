@@ -129,7 +129,7 @@ public class ODB {
                 String stadt=result.getString("stadt");
                 String strasse=result.getString("strasse");
 
-                String line = String.format("\"%s\",%s,%s,%s,%s,%s",
+                String line = String.format("%s,%s,%s,%s,%s,%s",
                         name, vorname, geburtstag, geschlecht, stadt,strasse);
                 fileWriter.newLine();
                 fileWriter.write(line);

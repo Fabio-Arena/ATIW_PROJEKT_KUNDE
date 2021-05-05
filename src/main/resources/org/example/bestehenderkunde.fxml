@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.BestehenderkundeController">
+   <right>
+      <TableView fx:id="kundendaten" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn prefWidth="90.0" text="Name" />
+          <TableColumn prefWidth="74.0" text="Vorname" />
+            <TableColumn prefWidth="84.0" text="Geburtstag" />
+            <TableColumn prefWidth="73.0" text="Geschlecht" />
+            <TableColumn prefWidth="69.0" text="Stadt" />
+            <TableColumn prefWidth="109.0" text="Straße" />
+        </columns>
+      </TableView>
+   </right>
+</BorderPane>
