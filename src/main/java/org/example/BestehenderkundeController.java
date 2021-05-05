@@ -72,7 +72,8 @@ public class BestehenderkundeController implements Initializable {
 
             while (result.next()) {
                 String name = result.getString("name");
-                data = FXCollections.observableArrayList(result.getString("vorname"));
+                data.add(result.getString("name"));
+                //data = FXCollections.observableArrayList(result.getString("vorname"));
                 String geburtstag = result.getString("geburtstag");
                 String geschlecht = result.getString("geschlecht");
                 String stadt = result.getString("stadt");
