@@ -9,12 +9,12 @@
    <right>
       <TableView fx:id="kundendaten" prefHeight="500.0" prefWidth="500.0" BorderPane.alignment="CENTER">
         <columns>
-          <TableColumn prefWidth="90.0" text="Name" />
-          <TableColumn prefWidth="74.0" text="Vorname" />
-            <TableColumn prefWidth="84.0" text="Geburtstag" />
-            <TableColumn prefWidth="73.0" text="Geschlecht" />
-            <TableColumn prefWidth="69.0" text="Stadt" />
-            <TableColumn prefWidth="109.0" text="Straße" />
+          <TableColumn fx:id="spalte_name" prefWidth="90.0" text="Name" />
+          <TableColumn fx:id="spalte_vorname" prefWidth="74.0" text="Vorname" />
+            <TableColumn fx:id="spalte_geburtstag" prefWidth="84.0" text="Geburtstag" />
+            <TableColumn fx:id="spalte_geschlecht" prefWidth="73.0" text="Geschlecht" />
+            <TableColumn fx:id="spalte_stadt" prefWidth="69.0" text="Stadt" />
+            <TableColumn fx:id="spalte_strasse" prefWidth="109.0" text="Straße" />
         </columns>
       </TableView>
    </right>
