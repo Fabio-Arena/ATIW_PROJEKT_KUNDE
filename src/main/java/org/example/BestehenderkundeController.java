@@ -72,19 +72,14 @@ public class BestehenderkundeController implements Initializable {
 
             while (result.next()) {
                 String name = result.getString("name");
-                data = FXCollections.observableArrayList(result.getString("vorname"));
+                data = FXCollections.observableArrayList(result.getString("name"),result.getString("vorname"),result.getString("geburtstag"),result.getString("geschlecht"),result.getString("stadt"),result.getString("strasse"));
                 String geburtstag = result.getString("geburtstag");
                 String geschlecht = result.getString("geschlecht");
                 String stadt = result.getString("stadt");
                 String strasse = result.getString("strasse");
 
 
-                kundendaten.getItems().add(FXCollections.observableArrayList(name));
-                kundendaten.getItems().add(data);
-                kundendaten.getItems().add(FXCollections.observableArrayList(geburtstag));
-                kundendaten.getItems().add(FXCollections.observableArrayList(geschlecht));
-                kundendaten.getItems().add(FXCollections.observableArrayList(stadt));
-                kundendaten.getItems().add(FXCollections.observableArrayList(strasse));
+                kundendaten.setItems(data);
 
 
             }
