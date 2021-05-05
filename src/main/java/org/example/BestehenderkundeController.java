@@ -79,12 +79,12 @@ public class BestehenderkundeController implements Initializable {
                 String strasse = result.getString("strasse");
 
 
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_name));
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_vorname));
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_geburtstag));
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_geschlecht));
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_stadt));
-                kundendaten.getItems().add(FXCollections.observableArrayList(spalte_strasse));
+                kundendaten.getItems().add(FXCollections.observableArrayList(name));
+                kundendaten.getItems().add(data);
+                kundendaten.getItems().add(FXCollections.observableArrayList(geburtstag));
+                kundendaten.getItems().add(FXCollections.observableArrayList(geschlecht));
+                kundendaten.getItems().add(FXCollections.observableArrayList(stadt));
+                kundendaten.getItems().add(FXCollections.observableArrayList(strasse));
 
 
             }
