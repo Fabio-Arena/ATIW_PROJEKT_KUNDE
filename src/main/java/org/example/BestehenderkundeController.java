@@ -23,6 +23,8 @@ import java.util.ResourceBundle;
 public class BestehenderkundeController implements Initializable {
 
 
+    @FXML
+    private Button button_zuruck;
 
     @FXML
     private TableView kundendaten = new TableView();
@@ -108,5 +110,12 @@ public class BestehenderkundeController implements Initializable {
         }
 
 
+
+
+    }
+
+    @FXML
+    void Zuruck(ActionEvent event) throws IOException {
+        App.setRoot("primary");
     }
 }

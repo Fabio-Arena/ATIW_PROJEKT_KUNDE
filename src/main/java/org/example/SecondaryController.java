@@ -17,6 +17,8 @@ public class SecondaryController {
     @FXML
     private ImageView Logo;
 
+    @FXML
+    private Button buttonZuruck;
 
     @FXML
     private TextField textVorname;
@@ -92,6 +94,14 @@ public class SecondaryController {
         db.close();
 
     }
+
+    @FXML
+    void Zuruck(ActionEvent event) throws IOException {
+
+        App.setRoot("primary");
+
+    }
+
 
 
 
