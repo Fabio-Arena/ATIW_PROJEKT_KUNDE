@@ -28,23 +28,23 @@ public class BestehenderkundeController implements Initializable {
     private TableView kundendaten = new TableView();
 
     @FXML
-    private TableColumn spalte_name = new TableColumn("Name");
+    private TableColumn<String, String> spalte_name = new TableColumn<>("Name");
 
 
     @FXML
-    private TableColumn spalte_vorname = new TableColumn("Vorname");
+    private TableColumn<String, String> spalte_vorname = new TableColumn<>("Vorname");
 
     @FXML
-    private TableColumn spalte_geburtstag = new TableColumn("Geburtstag");
+    private TableColumn<String, String> spalte_geburtstag = new TableColumn<>("Geburtstag");
 
     @FXML
-    private TableColumn spalte_geschlecht = new TableColumn("Geschlecht");
+    private TableColumn<String, String> spalte_geschlecht = new TableColumn<>("Geschlecht");
 
     @FXML
-    private TableColumn spalte_stadt = new TableColumn<>("Stadt");
+    private TableColumn<String, String> spalte_stadt = new TableColumn<>("Stadt");
 
     @FXML
-    private TableColumn spalte_strasse = new TableColumn("Strasse");
+    private TableColumn<String, String> spalte_strasse = new TableColumn<>("Strasse");
 
     private ODB db = new ODB("SUS_FS191_MASTER","m","oracle.s-atiw.de","1521","atiwora");
 
