@@ -57,13 +57,14 @@ public class BestehenderkundeController implements Initializable {
         kundendaten.getColumns().clear();
 
         spalte_name.setCellValueFactory(new PropertyValueFactory<Kunde, String>("name"));
-        spalte_vorname.setCellValueFactory(new PropertyValueFactory<Kunde, String>("vorname"));
+        /*spalte_vorname.setCellValueFactory(new PropertyValueFactory<Kunde, String>("vorname"));
         spalte_geburtstag.setCellValueFactory(new PropertyValueFactory<Kunde, String>("geburtstag"));
         spalte_geschlecht.setCellValueFactory(new PropertyValueFactory<Kunde, String>("geschlecht"));
         spalte_stadt.setCellValueFactory(new PropertyValueFactory<Kunde, String>("stadt"));
         spalte_strasse.setCellValueFactory(new PropertyValueFactory<Kunde, String>("strasse"));
         kundendaten.getColumns().addAll(spalte_name, spalte_vorname, spalte_geburtstag, spalte_geschlecht, spalte_stadt, spalte_strasse);
-
+*/
+        kundendaten.getColumns().add(spalte_name);
 
         try (Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@(DESCRIPTION="
                 + "(ADDRESS=(PROTOCOL=tcp)(HOST=" + "oracle.s-atiw.de" + ")(PORT=" + "1521" + "))"
