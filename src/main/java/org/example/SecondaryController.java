@@ -87,7 +87,7 @@ public class SecondaryController {
 
         db.insertData(textNachname.getText(), textVorname.getText(), datepickerDatum.getValue().toString(), geschl , textStadt.getText(), textStraße.getText());
 
-        db.sqlToCSV();
+
 
 
 

@@ -38,7 +38,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.PrimaryController">
    <left>
       <Button fx:id="neukunde_registrieren" mnemonicParsing="false" onAction="#Neukunderegistrieren" prefHeight="65.0" prefWidth="78.0" text="Neukunden registrieren" wrapText="true" BorderPane.alignment="CENTER">
@@ -71,4 +70,11 @@
          </font>
       </Label>
    </center>
+   <bottom>
+      <Button fx:id="button_exportieren" mnemonicParsing="false" onAction="#CSV" text="CSV-Export" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" />
+         </BorderPane.margin>
+      </Button>
+   </bottom>
 </BorderPane>
